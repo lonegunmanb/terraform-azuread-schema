@@ -37,6 +37,7 @@ jobs:
     - name: generate schemas
       run: |
         go run cmd/main.go -refresh true
+        go mod tidy
     - name: Run tests for generated package
       run: go test github.com/${{ github.repository }}/v2/generated/...
     - name: Run Gosec Security Scanner
