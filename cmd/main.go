@@ -185,7 +185,7 @@ func checkGitHubTag(schemaVersion string) (bool, error) {
 	options := &github.ListOptions{PerPage: 100}
 
 	for {
-		tags, resp, err := client.Repositories.ListTags(context.Background(), "lonegunmanb", "terraform-azurerm-schema", options)
+		tags, resp, err := client.Repositories.ListTags(context.Background(), "lonegunmanb", "terraform-azuread-schema", options)
 		if err != nil {
 			return false, err
 		}
