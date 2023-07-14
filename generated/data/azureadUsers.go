@@ -9,6 +9,16 @@ import (
 const azureadUsers = `{
   "block": {
     "attributes": {
+      "employee_ids": {
+        "computed": true,
+        "description": "The employee identifier assigned to the user by the organisation",
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          "string"
+        ]
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -68,6 +78,7 @@ const azureadUsers = `{
             {
               "account_enabled": "bool",
               "display_name": "string",
+              "employee_id": "string",
               "mail": "string",
               "mail_nickname": "string",
               "object_id": "string",

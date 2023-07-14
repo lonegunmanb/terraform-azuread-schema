@@ -90,6 +90,31 @@ const azureadConditionalAccessPolicy = `{
               "min_items": 1,
               "nesting_mode": "list"
             },
+            "client_applications": {
+              "block": {
+                "attributes": {
+                  "excluded_service_principals": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  },
+                  "included_service_principals": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "list",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "devices": {
               "block": {
                 "block_types": {
@@ -284,6 +309,11 @@ const azureadConditionalAccessPolicy = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
+            },
+            "disable_resilience_defaults": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
             },
             "persistent_browser_mode": {
               "description_kind": "plain",

@@ -88,6 +88,7 @@ const azureadUser = `{
         "computed": true,
         "description": "The employee identifier assigned to the user by the organisation",
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "employee_type": {
