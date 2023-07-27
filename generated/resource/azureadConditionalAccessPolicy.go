@@ -38,6 +38,14 @@ const azureadConditionalAccessPolicy = `{
                 "string"
               ]
             },
+            "service_principal_risk_levels": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "list",
+                "string"
+              ]
+            },
             "sign_in_risk_levels": {
               "description_kind": "plain",
               "optional": true,
@@ -294,7 +302,6 @@ const azureadConditionalAccessPolicy = `{
           "description_kind": "plain"
         },
         "max_items": 1,
-        "min_items": 1,
         "nesting_mode": "list"
       },
       "session_controls": {
