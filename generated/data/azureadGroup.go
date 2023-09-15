@@ -99,6 +99,7 @@ const azureadGroup = `{
         "computed": true,
         "description": "The mail alias for the group, unique in the organisation",
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "members": {

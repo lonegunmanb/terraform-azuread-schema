@@ -271,7 +271,7 @@ const azureadConditionalAccessPolicy = `{
           "attributes": {
             "built_in_controls": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": [
                 "list",
                 "string"
