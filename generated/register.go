@@ -32,6 +32,7 @@ func init() {
 	resources["azuread_custom_directory_role"] = resource.AzureadCustomDirectoryRoleSchema()  
 	resources["azuread_directory_role"] = resource.AzureadDirectoryRoleSchema()  
 	resources["azuread_directory_role_assignment"] = resource.AzureadDirectoryRoleAssignmentSchema()  
+	resources["azuread_directory_role_eligibility_schedule_request"] = resource.AzureadDirectoryRoleEligibilityScheduleRequestSchema()  
 	resources["azuread_directory_role_member"] = resource.AzureadDirectoryRoleMemberSchema()  
 	resources["azuread_group"] = resource.AzureadGroupSchema()  
 	resources["azuread_group_member"] = resource.AzureadGroupMemberSchema()  
