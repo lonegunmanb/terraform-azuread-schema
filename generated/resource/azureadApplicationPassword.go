@@ -9,10 +9,19 @@ import (
 const azureadApplicationPassword = `{
   "block": {
     "attributes": {
+      "application_id": {
+        "computed": true,
+        "description": "The resource ID of the application for which this password should be created",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "application_object_id": {
+        "computed": true,
+        "deprecated": true,
         "description": "The object ID of the application for which this password should be created",
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "display_name": {

@@ -11,7 +11,18 @@ const azureadServicePrincipals = `{
     "attributes": {
       "application_ids": {
         "computed": true,
+        "deprecated": true,
         "description": "The application IDs (client IDs) of the applications associated with the service principals",
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          "string"
+        ]
+      },
+      "client_ids": {
+        "computed": true,
+        "description": "The client IDs of the applications associated with the service principals",
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -70,6 +81,7 @@ const azureadServicePrincipals = `{
               "app_role_assignment_required": "bool",
               "application_id": "string",
               "application_tenant_id": "string",
+              "client_id": "string",
               "display_name": "string",
               "object_id": "string",
               "preferred_single_sign_on_mode": "string",

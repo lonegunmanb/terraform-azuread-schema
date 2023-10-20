@@ -62,6 +62,7 @@ const azureadServicePrincipal = `{
       },
       "application_id": {
         "computed": true,
+        "deprecated": true,
         "description": "The application ID (client ID) of the application associated with this service principal",
         "description_kind": "plain",
         "optional": true,
@@ -71,6 +72,13 @@ const azureadServicePrincipal = `{
         "computed": true,
         "description": "The tenant ID where the associated application is registered",
         "description_kind": "plain",
+        "type": "string"
+      },
+      "client_id": {
+        "computed": true,
+        "description": "The client ID of the application associated with this service principal",
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "description": {

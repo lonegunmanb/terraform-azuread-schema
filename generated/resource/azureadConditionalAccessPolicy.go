@@ -269,6 +269,11 @@ const azureadConditionalAccessPolicy = `{
       "grant_controls": {
         "block": {
           "attributes": {
+            "authentication_strength_policy_id": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "built_in_controls": {
               "description_kind": "plain",
               "optional": true,

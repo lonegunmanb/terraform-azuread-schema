@@ -9,10 +9,19 @@ import (
 const azureadApplicationCertificate = `{
   "block": {
     "attributes": {
+      "application_id": {
+        "computed": true,
+        "description": "The resource ID of the application for which this certificate should be created",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "application_object_id": {
+        "computed": true,
+        "deprecated": true,
         "description": "The object ID of the application for which this certificate should be created",
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "encoding": {
@@ -61,7 +70,7 @@ const azureadApplicationCertificate = `{
         "type": "string"
       },
       "value": {
-        "description": "The certificate data, which can be PEM encoded, base64 encoded DER or hexadecimal encoded DER. See also the ` + "`" + `encoding` + "`" + ` argumen",
+        "description": "The certificate data, which can be PEM encoded, base64 encoded DER or hexadecimal encoded DER. See also the ` + "`" + `encoding` + "`" + ` argument",
         "description_kind": "plain",
         "required": true,
         "sensitive": true,

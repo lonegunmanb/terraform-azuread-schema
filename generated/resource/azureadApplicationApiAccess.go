@@ -6,37 +6,19 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const azureadApplicationPreAuthorized = `{
+const azureadApplicationApiAccess = `{
   "block": {
     "attributes": {
+      "api_client_id": {
+        "description": "The client ID of the API to which access is being granted",
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
       "application_id": {
-        "computed": true,
-        "description": "The resource ID of the application to which this pre-authorized application should be added",
+        "description": "The resource ID of the application to which this API access is granted",
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "application_object_id": {
-        "computed": true,
-        "deprecated": true,
-        "description": "The object ID of the application to which this pre-authorized application should be added",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "authorized_app_id": {
-        "computed": true,
-        "deprecated": true,
-        "description": "The application ID of the pre-authorized application",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "authorized_client_id": {
-        "computed": true,
-        "description": "The client ID of the pre-authorized application",
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "id": {
@@ -45,10 +27,19 @@ const azureadApplicationPreAuthorized = `{
         "optional": true,
         "type": "string"
       },
-      "permission_ids": {
-        "description": "The IDs of the permission scopes required by the pre-authorized application",
+      "role_ids": {
+        "description": "A set of role IDs to be granted to the application, as published by the API",
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "scope_ids": {
+        "description": "A set of scope IDs to be granted to the application, as published by the API",
+        "description_kind": "plain",
+        "optional": true,
         "type": [
           "set",
           "string"
@@ -90,8 +81,8 @@ const azureadApplicationPreAuthorized = `{
   "version": 0
 }`
 
-func AzureadApplicationPreAuthorizedSchema() *tfjson.Schema {
+func AzureadApplicationApiAccessSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(azureadApplicationPreAuthorized), &result)
+	_ = json.Unmarshal([]byte(azureadApplicationApiAccess), &result)
 	return &result
 }

@@ -20,7 +20,14 @@ const azureadApplication = `{
       },
       "application_id": {
         "computed": true,
+        "deprecated": true,
         "description": "The Application ID (also called Client ID)",
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "client_id": {
+        "computed": true,
+        "description": "The Client ID (also called Application ID)",
         "description_kind": "plain",
         "type": "string"
       },
@@ -630,7 +637,7 @@ const azureadApplication = `{
     },
     "description_kind": "plain"
   },
-  "version": 1
+  "version": 2
 }`
 
 func AzureadApplicationSchema() *tfjson.Schema {

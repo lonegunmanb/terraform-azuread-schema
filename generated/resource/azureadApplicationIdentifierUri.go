@@ -6,20 +6,13 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const azureadDirectoryRole = `{
+const azureadApplicationIdentifierUri = `{
   "block": {
     "attributes": {
-      "description": {
-        "computed": true,
-        "description": "The description of the directory role",
+      "application_id": {
+        "description": "The resource ID of the application to which the identifier URI should be added",
         "description_kind": "plain",
-        "type": "string"
-      },
-      "display_name": {
-        "computed": true,
-        "description": "The display name of the directory role",
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "id": {
@@ -28,17 +21,10 @@ const azureadDirectoryRole = `{
         "optional": true,
         "type": "string"
       },
-      "object_id": {
-        "computed": true,
-        "description": "The object ID of the directory role",
+      "identifier_uri": {
+        "description": "The user-defined URI that uniquely identifies an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant",
         "description_kind": "plain",
-        "type": "string"
-      },
-      "template_id": {
-        "computed": true,
-        "description": "The object ID of the template associated with the directory role",
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       }
     },
@@ -72,8 +58,8 @@ const azureadDirectoryRole = `{
   "version": 0
 }`
 
-func AzureadDirectoryRoleSchema() *tfjson.Schema {
+func AzureadApplicationIdentifierUriSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(azureadDirectoryRole), &result)
+	_ = json.Unmarshal([]byte(azureadApplicationIdentifierUri), &result)
 	return &result
 }

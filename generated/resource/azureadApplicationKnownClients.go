@@ -6,37 +6,13 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const azureadApplicationPreAuthorized = `{
+const azureadApplicationKnownClients = `{
   "block": {
     "attributes": {
       "application_id": {
-        "computed": true,
-        "description": "The resource ID of the application to which this pre-authorized application should be added",
+        "description": "The resource ID of the application to which this API access is granted",
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "application_object_id": {
-        "computed": true,
-        "deprecated": true,
-        "description": "The object ID of the application to which this pre-authorized application should be added",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "authorized_app_id": {
-        "computed": true,
-        "deprecated": true,
-        "description": "The application ID of the pre-authorized application",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "authorized_client_id": {
-        "computed": true,
-        "description": "The client ID of the pre-authorized application",
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "id": {
@@ -45,8 +21,8 @@ const azureadApplicationPreAuthorized = `{
         "optional": true,
         "type": "string"
       },
-      "permission_ids": {
-        "description": "The IDs of the permission scopes required by the pre-authorized application",
+      "known_client_ids": {
+        "description": "A list of known client IDs, used for bundling consent if you have a solution that includes an API and a client application",
         "description_kind": "plain",
         "required": true,
         "type": [
@@ -90,8 +66,8 @@ const azureadApplicationPreAuthorized = `{
   "version": 0
 }`
 
-func AzureadApplicationPreAuthorizedSchema() *tfjson.Schema {
+func AzureadApplicationKnownClientsSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(azureadApplicationPreAuthorized), &result)
+	_ = json.Unmarshal([]byte(azureadApplicationKnownClients), &result)
 	return &result
 }
