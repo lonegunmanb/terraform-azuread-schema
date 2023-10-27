@@ -253,6 +253,86 @@ const azureadConditionalAccessPolicy = `{
                     ]
                   }
                 },
+                "block_types": {
+                  "excluded_guests_or_external_users": {
+                    "block": {
+                      "attributes": {
+                        "guest_or_external_user_types": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": [
+                            "list",
+                            "string"
+                          ]
+                        }
+                      },
+                      "block_types": {
+                        "external_tenants": {
+                          "block": {
+                            "attributes": {
+                              "members": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": [
+                                  "list",
+                                  "string"
+                                ]
+                              },
+                              "membership_kind": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  },
+                  "included_guests_or_external_users": {
+                    "block": {
+                      "attributes": {
+                        "guest_or_external_user_types": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": [
+                            "list",
+                            "string"
+                          ]
+                        }
+                      },
+                      "block_types": {
+                        "external_tenants": {
+                          "block": {
+                            "attributes": {
+                              "members": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": [
+                                  "list",
+                                  "string"
+                                ]
+                              },
+                              "membership_kind": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "list"
+                  }
+                },
                 "description_kind": "plain"
               },
               "max_items": 1,
@@ -336,6 +416,16 @@ const azureadConditionalAccessPolicy = `{
               "description_kind": "plain",
               "optional": true,
               "type": "number"
+            },
+            "sign_in_frequency_authentication_type": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "sign_in_frequency_interval": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
             },
             "sign_in_frequency_period": {
               "description_kind": "plain",

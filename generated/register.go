@@ -31,6 +31,7 @@ func init() {
 	resources["azuread_application_from_template"] = resource.AzureadApplicationFromTemplateSchema()  
 	resources["azuread_application_identifier_uri"] = resource.AzureadApplicationIdentifierUriSchema()  
 	resources["azuread_application_known_clients"] = resource.AzureadApplicationKnownClientsSchema()  
+	resources["azuread_application_optional_claims"] = resource.AzureadApplicationOptionalClaimsSchema()  
 	resources["azuread_application_owner"] = resource.AzureadApplicationOwnerSchema()  
 	resources["azuread_application_password"] = resource.AzureadApplicationPasswordSchema()  
 	resources["azuread_application_permission_scope"] = resource.AzureadApplicationPermissionScopeSchema()  
