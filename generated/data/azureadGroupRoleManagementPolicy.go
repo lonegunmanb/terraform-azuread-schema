@@ -1,4 +1,4 @@
-package resource
+package data
 
 import (
 	"encoding/json"
@@ -6,11 +6,23 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const azureadApplicationIdentifierUri = `{
+const azureadGroupRoleManagementPolicy = `{
   "block": {
     "attributes": {
-      "application_id": {
-        "description": "The resource ID of the application to which the identifier URI should be added",
+      "description": {
+        "computed": true,
+        "description": "Description of the policy",
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "display_name": {
+        "computed": true,
+        "description": "The display name of the policy",
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "group_id": {
+        "description": "ID of the group to which this policy is assigned",
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -21,8 +33,8 @@ const azureadApplicationIdentifierUri = `{
         "optional": true,
         "type": "string"
       },
-      "identifier_uri": {
-        "description": "The user-defined URI or URI-like string that uniquely identifies an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant",
+      "role_id": {
+        "description": "The ID of the role of this policy to the group",
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -32,16 +44,6 @@ const azureadApplicationIdentifierUri = `{
       "timeouts": {
         "block": {
           "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "read": {
               "description_kind": "plain",
               "optional": true,
@@ -58,8 +60,8 @@ const azureadApplicationIdentifierUri = `{
   "version": 0
 }`
 
-func AzureadApplicationIdentifierUriSchema() *tfjson.Schema {
+func AzureadGroupRoleManagementPolicySchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(azureadApplicationIdentifierUri), &result)
+	_ = json.Unmarshal([]byte(azureadGroupRoleManagementPolicy), &result)
 	return &result
 }

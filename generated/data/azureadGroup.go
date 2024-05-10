@@ -82,6 +82,12 @@ const azureadGroup = `{
         "optional": true,
         "type": "string"
       },
+      "include_transitive_members": {
+        "description": "Specifies whether to include transitive members (a flat list of all nested members).",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "mail": {
         "computed": true,
         "description": "The SMTP address for the group",
