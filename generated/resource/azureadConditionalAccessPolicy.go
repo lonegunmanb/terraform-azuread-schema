@@ -418,11 +418,13 @@ const azureadConditionalAccessPolicy = `{
               "type": "number"
             },
             "sign_in_frequency_authentication_type": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "sign_in_frequency_interval": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"

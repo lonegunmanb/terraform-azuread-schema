@@ -152,6 +152,13 @@ const azureadApplication = `{
         "optional": true,
         "type": "string"
       },
+      "identifier_uri": {
+        "computed": true,
+        "description": "One of the application's identifier URIs",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "identifier_uris": {
         "computed": true,
         "description": "A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant",
