@@ -41,6 +41,16 @@ const azureadUsers = `{
           "string"
         ]
       },
+      "mails": {
+        "computed": true,
+        "description": "The SMTP address of the users",
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "list",
+          "string"
+        ]
+      },
       "object_ids": {
         "computed": true,
         "description": "The object IDs of the users",
