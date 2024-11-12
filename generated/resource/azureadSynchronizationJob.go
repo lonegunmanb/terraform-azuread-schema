@@ -37,7 +37,7 @@ const azureadSynchronizationJob = `{
         ]
       },
       "service_principal_id": {
-        "description": "The object ID of the service principal for which this synchronization job should be created",
+        "description": "The ID of the service principal for which this synchronization job should be created",
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -81,7 +81,7 @@ const azureadSynchronizationJob = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AzureadSynchronizationJobSchema() *tfjson.Schema {

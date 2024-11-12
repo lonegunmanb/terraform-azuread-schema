@@ -74,14 +74,6 @@ const azureadApplication = `{
           ]
         ]
       },
-      "application_id": {
-        "computed": true,
-        "deprecated": true,
-        "description": "The Application ID (also called Client ID)",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "client_id": {
         "computed": true,
         "description": "The Client ID (also called Application ID)",

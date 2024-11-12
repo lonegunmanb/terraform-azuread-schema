@@ -10,33 +10,15 @@ const azureadApplicationPreAuthorized = `{
   "block": {
     "attributes": {
       "application_id": {
-        "computed": true,
         "description": "The resource ID of the application to which this pre-authorized application should be added",
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "application_object_id": {
-        "computed": true,
-        "deprecated": true,
-        "description": "The object ID of the application to which this pre-authorized application should be added",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "authorized_app_id": {
-        "computed": true,
-        "deprecated": true,
-        "description": "The application ID of the pre-authorized application",
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "authorized_client_id": {
-        "computed": true,
         "description": "The client ID of the pre-authorized application",
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "id": {

@@ -10,18 +10,9 @@ const azureadApplicationPassword = `{
   "block": {
     "attributes": {
       "application_id": {
-        "computed": true,
         "description": "The resource ID of the application for which this password should be created",
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "application_object_id": {
-        "computed": true,
-        "deprecated": true,
-        "description": "The object ID of the application for which this password should be created",
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "display_name": {
@@ -39,6 +30,7 @@ const azureadApplicationPassword = `{
         "type": "string"
       },
       "end_date_relative": {
+        "deprecated": true,
         "description": "A relative duration for which the password is valid until, for example ` + "`" + `240h` + "`" + ` (10 days) or ` + "`" + `2400h30m` + "`" + `. Changing this field forces a new resource to be created",
         "description_kind": "plain",
         "optional": true,

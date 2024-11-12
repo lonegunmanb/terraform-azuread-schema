@@ -69,7 +69,7 @@ const azureadDirectoryRole = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AzureadDirectoryRoleSchema() *tfjson.Schema {

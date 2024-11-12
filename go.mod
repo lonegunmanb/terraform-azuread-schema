@@ -1,6 +1,8 @@
-module github.com/lonegunmanb/terraform-azuread-schema/v2
+module github.com/lonegunmanb/terraform-azuread-schema/v3
 
-go 1.20
+go 1.22.0
+
+toolchain go1.23.3
 
 require (
 	github.com/ahmetb/go-linq/v3 v3.2.0

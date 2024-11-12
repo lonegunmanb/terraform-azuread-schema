@@ -24,6 +24,7 @@ const azureadServicePrincipalPassword = `{
         "type": "string"
       },
       "end_date_relative": {
+        "deprecated": true,
         "description": "A relative duration for which the password is valid until, for example ` + "`" + `240h` + "`" + ` (10 days) or ` + "`" + `2400h30m` + "`" + `. Changing this field forces a new resource to be created",
         "description_kind": "plain",
         "optional": true,
@@ -51,7 +52,7 @@ const azureadServicePrincipalPassword = `{
         ]
       },
       "service_principal_id": {
-        "description": "The object ID of the service principal for which this password should be created",
+        "description": "The ID of the service principal for which this password should be created",
         "description_kind": "plain",
         "required": true,
         "type": "string"

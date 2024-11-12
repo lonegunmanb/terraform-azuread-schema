@@ -10,18 +10,9 @@ const azureadApplicationFederatedIdentityCredential = `{
   "block": {
     "attributes": {
       "application_id": {
-        "computed": true,
         "description": "The resource ID of the application for which this federated identity credential should be created",
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "application_object_id": {
-        "computed": true,
-        "deprecated": true,
-        "description": "The object ID of the application for which this federated identity credential should be created",
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "audiences": {

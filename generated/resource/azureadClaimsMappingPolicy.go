@@ -63,7 +63,7 @@ const azureadClaimsMappingPolicy = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AzureadClaimsMappingPolicySchema() *tfjson.Schema {
