@@ -16,22 +16,7 @@ const azureadDirectoryRoleAssignment = `{
         "optional": true,
         "type": "string"
       },
-      "app_scope_object_id": {
-        "computed": true,
-        "deprecated": true,
-        "description": "Identifier of the app-specific scope when the assignment scope is app-specific",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "directory_scope_id": {
-        "computed": true,
-        "description": "Identifier of the directory object representing the scope of the assignment",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "directory_scope_object_id": {
         "computed": true,
         "description": "Identifier of the directory object representing the scope of the assignment",
         "description_kind": "plain",
@@ -84,7 +69,7 @@ const azureadDirectoryRoleAssignment = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AzureadDirectoryRoleAssignmentSchema() *tfjson.Schema {

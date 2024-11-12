@@ -23,6 +23,7 @@ const azureadServicePrincipalCertificate = `{
         "type": "string"
       },
       "end_date_relative": {
+        "deprecated": true,
         "description": "A relative duration for which the certificate is valid until, for example ` + "`" + `240h` + "`" + ` (10 days) or ` + "`" + `2400h30m` + "`" + `. Valid time units are \"ns\", \"us\" (or \"µs\"), \"ms\", \"s\", \"m\", \"h\"",
         "description_kind": "plain",
         "optional": true,

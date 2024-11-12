@@ -22,7 +22,7 @@ const azureadServicePrincipalClaimsMappingPolicyAssignment = `{
         "type": "string"
       },
       "service_principal_id": {
-        "description": "Object ID of the service principal for which to assign the policy",
+        "description": "ID of the service principal for which to assign the policy",
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -55,7 +55,7 @@ const azureadServicePrincipalClaimsMappingPolicyAssignment = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AzureadServicePrincipalClaimsMappingPolicyAssignmentSchema() *tfjson.Schema {

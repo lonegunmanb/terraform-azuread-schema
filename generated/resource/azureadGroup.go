@@ -279,7 +279,7 @@ const azureadGroup = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AzureadGroupSchema() *tfjson.Schema {

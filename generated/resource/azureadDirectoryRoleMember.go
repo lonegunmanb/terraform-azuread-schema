@@ -56,7 +56,7 @@ const azureadDirectoryRoleMember = `{
     "deprecated": true,
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AzureadDirectoryRoleMemberSchema() *tfjson.Schema {

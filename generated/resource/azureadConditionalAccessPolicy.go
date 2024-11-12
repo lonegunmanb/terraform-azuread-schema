@@ -20,6 +20,12 @@ const azureadConditionalAccessPolicy = `{
         "optional": true,
         "type": "string"
       },
+      "object_id": {
+        "computed": true,
+        "description": "The object ID of the policy",
+        "description_kind": "plain",
+        "type": "string"
+      },
       "state": {
         "description_kind": "plain",
         "required": true,
@@ -471,7 +477,7 @@ const azureadConditionalAccessPolicy = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AzureadConditionalAccessPolicySchema() *tfjson.Schema {

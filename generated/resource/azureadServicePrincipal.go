@@ -60,14 +60,6 @@ const azureadServicePrincipal = `{
           ]
         ]
       },
-      "application_id": {
-        "computed": true,
-        "deprecated": true,
-        "description": "The application ID (client ID) of the application for which to create a service principal",
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "application_tenant_id": {
         "computed": true,
         "description": "The tenant ID where the associated application is registered",
@@ -75,10 +67,9 @@ const azureadServicePrincipal = `{
         "type": "string"
       },
       "client_id": {
-        "computed": true,
         "description": "The client ID of the application for which to create a service principal",
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "description": {
@@ -350,7 +341,7 @@ const azureadServicePrincipal = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AzureadServicePrincipalSchema() *tfjson.Schema {

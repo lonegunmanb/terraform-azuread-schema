@@ -55,7 +55,7 @@ const azureadAdministrativeUnitMember = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AzureadAdministrativeUnitMemberSchema() *tfjson.Schema {

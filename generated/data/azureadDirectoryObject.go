@@ -16,14 +16,14 @@ const azureadDirectoryObject = `{
         "type": "string"
       },
       "object_id": {
-        "description": "The object ID of the principal",
+        "description": "The object ID of the Directory Object",
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
       "type": {
         "computed": true,
-        "description": "The OData type of the principal",
+        "description": "The OData type of the Directory Object",
         "description_kind": "plain",
         "type": "string"
       }
