@@ -103,6 +103,12 @@ const azureadUser = `{
         "optional": true,
         "type": "string"
       },
+      "employee_hire_date": {
+        "description": "The hire date of the user, formatted as an RFC3339 date string (e.g. ` + "`" + `2018-01-01T01:02:03Z` + "`" + `).",
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "employee_id": {
         "description": "The employee identifier assigned to the user by the organisation",
         "description_kind": "plain",

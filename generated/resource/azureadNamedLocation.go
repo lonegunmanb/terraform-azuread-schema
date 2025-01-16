@@ -33,6 +33,11 @@ const azureadNamedLocation = `{
                 "string"
               ]
             },
+            "country_lookup_method": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "include_unknown_countries_and_regions": {
               "description_kind": "plain",
               "optional": true,

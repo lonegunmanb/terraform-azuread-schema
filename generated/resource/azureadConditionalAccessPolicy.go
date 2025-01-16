@@ -44,6 +44,12 @@ const azureadConditionalAccessPolicy = `{
                 "string"
               ]
             },
+            "insider_risk_levels": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "service_principal_risk_levels": {
               "description_kind": "plain",
               "optional": true,

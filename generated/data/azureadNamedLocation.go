@@ -21,6 +21,7 @@ const azureadNamedLocation = `{
                 "list",
                 "string"
               ],
+              "country_lookup_method": "string",
               "include_unknown_countries_and_regions": "bool"
             }
           ]
