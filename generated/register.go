@@ -49,6 +49,7 @@ func init() {
 	resources["azuread_group"] = resource.AzureadGroupSchema()  
 	resources["azuread_group_member"] = resource.AzureadGroupMemberSchema()  
 	resources["azuread_group_role_management_policy"] = resource.AzureadGroupRoleManagementPolicySchema()  
+	resources["azuread_group_without_members"] = resource.AzureadGroupWithoutMembersSchema()  
 	resources["azuread_invitation"] = resource.AzureadInvitationSchema()  
 	resources["azuread_named_location"] = resource.AzureadNamedLocationSchema()  
 	resources["azuread_privileged_access_group_assignment_schedule"] = resource.AzureadPrivilegedAccessGroupAssignmentScheduleSchema()  
