@@ -130,6 +130,27 @@ const azureadConditionalAccessPolicy = `{
                     ]
                   }
                 },
+                "block_types": {
+                  "filter": {
+                    "block": {
+                      "attributes": {
+                        "mode": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "rule": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
                 "description_kind": "plain"
               },
               "max_items": 1,
