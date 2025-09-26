@@ -19,6 +19,12 @@ const azureadNamedLocation = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "object_id": {
+        "computed": true,
+        "description": "The object ID of the named location",
+        "description_kind": "plain",
+        "type": "string"
       }
     },
     "block_types": {
