@@ -36,6 +36,14 @@ const azureadConditionalAccessPolicy = `{
       "conditions": {
         "block": {
           "attributes": {
+            "authentication_flow_transfer_methods": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
             "client_app_types": {
               "description_kind": "plain",
               "required": true,

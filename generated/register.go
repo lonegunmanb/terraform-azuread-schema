@@ -28,6 +28,7 @@ func init() {
 	resources["azuread_application_certificate"] = resource.AzureadApplicationCertificateSchema()  
 	resources["azuread_application_fallback_public_client"] = resource.AzureadApplicationFallbackPublicClientSchema()  
 	resources["azuread_application_federated_identity_credential"] = resource.AzureadApplicationFederatedIdentityCredentialSchema()  
+	resources["azuread_application_flexible_federated_identity_credential"] = resource.AzureadApplicationFlexibleFederatedIdentityCredentialSchema()  
 	resources["azuread_application_from_template"] = resource.AzureadApplicationFromTemplateSchema()  
 	resources["azuread_application_identifier_uri"] = resource.AzureadApplicationIdentifierUriSchema()  
 	resources["azuread_application_known_clients"] = resource.AzureadApplicationKnownClientsSchema()  
